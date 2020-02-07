@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for遍历</title>
+</head>
+<body>
+    <h1>{{ usernmae }}</h1>
+    {% for k,v in user.items() %}
+        <p>{{ k }}：{{ v }}</p>
+    {% endfor %}
+
+    <hr>
+    {% for website in websites %}
+        <p>{{ website }}</p>
+    {% endfor %}
+
+    <hr>
+    <table>
+        <thead>
+            <th>书名</th>
+            <th>作者</th>
+            <th>价格</th>
+        </thead>
+        <tbody>
+           {% for book in books %}
+            <tr>
+               <td>{{ book.name }}</td>
+               <td>{{ book.author }}</td>
+               <td>{{ book.price }}</td>
+            </tr>
+           {% endfor %}
+
+        </tbody>
+    </table>
+    <hr>
+    <p>过滤器使用</p>
+    <p>设置默认值：{{ avatar|default('默认值') }}</p>
+    <p>评论数（{{ contents|length }}）</p>
+    <ul>
+        {% for content in contents %}
+            <li>
+                <a href="#">{{ content.name }}</a>
+                <p>{{ content.text }}</p>
+            </li>
+        {% endfor %}
+
+    </ul>
+</body>
+</html>

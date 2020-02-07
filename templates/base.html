@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}">
+    <script src="{{ url_for('static',filename='js/base.js') }}"></script>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="{{ url_for('login') }}">登陆</a></li>
+            <li><a href="#">发布问答</a></li>
+        </ul>
+    </div>
+    {% block main %}{% endblock %}
+</body>
+</html>

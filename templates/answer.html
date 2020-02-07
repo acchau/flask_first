@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问答页面</title>
+</head>
+<body>
+    测试if方法
+    <hr>
+    {% if user and user.age > 18 %}
+        <a href="#">{{ user.name }}</a>
+        <a href="#">注销</a>
+    {% else %}
+        <a href="#">登陆</a>
+        <a href="#">注册</a>
+    {% endif %}
+</body>
+</html>
